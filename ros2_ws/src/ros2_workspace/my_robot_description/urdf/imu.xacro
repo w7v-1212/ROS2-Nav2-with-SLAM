@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="imu_length" value="0.025"/>
+
+    <link name="imu_link">
+        <xacro:inertia_box m="0.05" l="${imu_length}" w="${imu_length}" h="${imu_length}" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${imu_length} ${imu_length} ${imu_length}"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${imu_length} ${imu_length} ${imu_length}"/>
+            </geometry>
+        </collision>
+    </link>
+
+</robot>

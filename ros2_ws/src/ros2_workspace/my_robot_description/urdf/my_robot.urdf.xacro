@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+
+    <xacro:include filename="common_properties.xacro"/>
+    <xacro:include filename="my_robot.xacro"/>
+    <xacro:include filename="lidar.xacro"/>
+    <xacro:include filename="imu.xacro"/>
+    <xacro:include filename="camera.xacro"/>
+    <xacro:include filename="gazebo_plugin.xacro"/>
+
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="0.0 0.0 ${base_height}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+    </joint>
+
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0.0 0.0 ${base_height/2}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+    </joint>
+
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="${base_length/2 + camera_length/2} 0.0 ${base_height/2}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+    </joint>
+
+</robot>
