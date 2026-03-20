@@ -1,7 +1,8 @@
 # ROS2-Nav2-with-SLAM
 ## 1. Introduction
 This project provides a comprehensive implementation of an autonomous navigation system designed for differential drive mobile robots, built on the latest **ROS2 Jazzy**, **Gazebo Harmonic** and **Nav2** framework.
-![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/cfa9bb1794ba76d5620878a2fd3dfb2f32619ed4/Images/5.mp4)
+
+![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/main/Images/5.gif?raw=true)
 ## 2. Getting Started
 ### 2.1 Clone Repository
 ```bash
