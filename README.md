@@ -1,7 +1,7 @@
 # ROS2-Nav2-with-SLAM
 ## 1. Introduction
 This project provides a comprehensive implementation of an autonomous navigation system designed for differential drive mobile robots, built on the latest ROS 2 Jazzy Jalisco and Nav2 framework.
-## 2. Prerequisites
+## 2. Getting Started
 ### 2.1 Clone Repository
 ```bash
 git clone https://github.com/w7v-1212/ROS2-Nav2-with-SLAM.git
@@ -11,7 +11,7 @@ git clone https://github.com/w7v-1212/ROS2-Nav2-with-SLAM.git
 ```bash
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-slam-toolbox
 ```
-### 2.3 Build Packages
+### 2.3 Build Enviroments
 After cloning the repository into the directory of your workspace, build the packages using:
 ```bash
 cd ros2_ws
