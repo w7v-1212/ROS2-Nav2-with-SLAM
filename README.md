@@ -13,7 +13,7 @@ git clone https://github.com/w7v-1212/ROS2-Nav2-with-SLAM.git
 ```bash
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-slam-toolbox
 ```
-### 2.3 Build Enviroments
+### 2.3 Build Environments
 After cloning the repository into the directory of your workspace, build the packages using:
 ```bash
 cd ros2_ws
