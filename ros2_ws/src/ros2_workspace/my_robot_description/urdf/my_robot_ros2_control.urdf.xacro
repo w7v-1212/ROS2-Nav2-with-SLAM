@@ -6,9 +6,7 @@
     <xacro:include filename="lidar.xacro"/>
     <xacro:include filename="imu.xacro"/>
     <xacro:include filename="camera.xacro"/>
-    <xacro:include filename="gazebo_plugin.xacro"/>
     <xacro:include filename="gazebo_sensor_plugin.xacro"/>
-    <xacro:include filename="ros2_control.xacro"/>
 
     <joint name="lidar_joint" type="fixed">
         <origin xyz="0.0 0.0 ${base_height}" rpy="0.0 0.0 0.0"/>
@@ -27,5 +25,29 @@
         <parent link="base_link"/>
         <child link="camera_link"/>
     </joint>
+
+    <ros2_control name="MyRobotHardwareInterface" type="system">
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            <param name="calculate_dynamics">true</param>
+        </hardware>
+
+        <joint name="left_wheel_joint">
+            <command_interface name="velocity"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="right_wheel_joint">
+            <command_interface name="velocity"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+    <gazebo>
+        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+            <parameters>$(find my_robot_bringup)/config/my_robot_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
 
 </robot>
