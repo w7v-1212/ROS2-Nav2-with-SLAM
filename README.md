@@ -1,8 +1,6 @@
 # ROS2-Nav2-with-SLAM
 ## 1. Introduction
-This repository provides a comprehensive implementation of an autonomous navigation system designed for differential drive mobile robots, built on the latest **ROS2 Jazzy**, **Gazebo Harmonic** and **Nav2** framework.
-
-Besides, this repository demonstrates two distinct methodologies for controlling a differential drive mobile robot, including:
+This repository provides a comprehensive implementation of an autonomous navigation system designed for differential drive mobile robots, built on the latest **ROS2 Jazzy**, **Gazebo Harmonic** and **Nav2** framework. Besides, this repository demonstrates two distinct methodologies for controlling a differential drive mobile robot, including:
 
 - **Gazebo Plugins:** Utilizing `gz::sim::systems::DiffDrive` and `gz::sim::systems::JointStatePublisher`
 
@@ -59,6 +57,7 @@ ros2 launch my_robot_description nav2.launch.xml
 ![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/main/Images/1.png?raw=true)
 ## 7. ROS2_Control
 ```bash
+# Launch Rviz2 & Gazebo with ROS2_Control
 ros2 launch my_robot_bringup my_robot_ros2_control.launch.xml
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true
 ```
