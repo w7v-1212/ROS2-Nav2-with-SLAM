@@ -46,6 +46,10 @@ ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True
 ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+```bash
+# Save Map
+ros2 run nav2_map_server map_saver_cli -f <file_path>
+```
 ![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/main/Images/4.png?raw=true)
 ### 3.4 Navigation
 ```bash
