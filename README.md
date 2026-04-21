@@ -162,5 +162,5 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/di
 ![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/main/Images/6.png?raw=true)
 
 ## 待办事项 (TODO)
-[x] ROS2 Control 框架集成 (已于 2026/3/23 更新)
-[ ] 开发 Nav2 Python API 接口控制
+- [x] ROS2 Control 框架集成 (已于 2026/3/23 更新)
+- [ ] 开发 Nav2 Python API 接口控制
