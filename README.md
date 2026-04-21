@@ -88,6 +88,10 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/di
 
 <a name="chinese-version"></a>
 ## 中文说明
+
+## 前言
+新手入门可先查看：[ROS2_新手入门指南](ROS2_Beginner/ROS2_新手入门指南/ROS2_新手入门指南.md)
+
 ## 1. 简介
 本仓库提供了一个完整的自主导航系统实现，专为差速驱动移动机器人设计。该系统基于最新的 ROS2 Jazzy、Gazebo Harmonic 和 Nav2 框架构建。此外，本仓库还展示了两种不同的差速机器人控制方案：Gazebo 插件（Gazebo Plugins） 和 ROS2_Control 框架。
 ![](https://github.com/w7v-1212/ROS2-Nav2-with-SLAM/blob/main/Images/5.gif?raw=true)
