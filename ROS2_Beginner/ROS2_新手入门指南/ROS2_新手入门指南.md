@@ -16,6 +16,6 @@
 
 |           章节           |                 关键内容                 | 状态 |
 | ----------------------| :--------------------------------------: | :--:|
-| [第一章 Turtlebot3 初体验](ROS2_Beginner/ROS2_新手入门指南/第一章%20Turtlebot%20初体验.md) | Turtlebot3 Gazebo + SLAM 建图、Nav2 导航 |  ✅   |
+| [第一章 Turtlebot3 初体验](./ROS2_Beginner/ROS2_新手入门指南/第一章%20Turtlebot%20初体验.md) | Turtlebot3 Gazebo + SLAM 建图、Nav2 导航 |  ✅   |
 |  [第二章 构建 SLAM 小车]()  |  URDF 、Xacro、Rviz 可视化、Launch 文件  | TODO |
 
