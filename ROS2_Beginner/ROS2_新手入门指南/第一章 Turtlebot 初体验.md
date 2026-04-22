@@ -29,8 +29,8 @@ export TURTLEBOT3_MODEL=waffle
 
 设置完成后，就可以在终端中输入以下指令来启动 TurtleBot3 的仿真环境：
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py # 终端1 - 启动 Gazebo (仿真)
-ros2 run turtlebot3_teleop teleop_keyboard # 终端2 - 启动键盘控制节点 (利用键盘控制 Turtlebot)
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py # 终端1 - 启动 Gazebo 仿真
+ros2 run turtlebot3_teleop teleop_keyboard # 终端2 - 启动键盘控制节点
 ```
 
 > Gazebo 默认不会显示 **LiDAR Beam**，需要手动开启 **Visualize LiDAR**
@@ -42,9 +42,9 @@ ros2 run turtlebot3_teleop teleop_keyboard # 终端2 - 启动键盘控制节点 
 ## 3. 启动Gazebo, Rviz, SLAM建图
 
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo (仿真)
-ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True # 终端2 - 启动建图节点 (建图和Rviz可视化)
-ros2 run turtlebot3_teleop teleop_keyboard # 终端3 - 启动键盘控制节点 (利用键盘控制 Turtlebot)
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo 仿真
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True # 终端2 - 启动建图节点
+ros2 run turtlebot3_teleop teleop_keyboard # 终端3 - 启动键盘控制节点
 ```
 
 > 若运行过程中出现报错，可尝试以下方法进行排查：
@@ -62,7 +62,7 @@ ros2 run turtlebot3_teleop teleop_keyboard # 终端3 - 启动键盘控制节点 
 # 保存地图
 ros2 run nav2_map_server map_saver_cli -f maps/my_map
 ```
-> `maps/my_map` 为文件路径
+> `maps/my_map`：文件路径
 
 执行后系统会把当前构建好的地图保存为文件，一般会生成 `my_map.pgm` 和 `my_map.yaml` 两个文件，后续用于导航或重定位使用
 
@@ -70,12 +70,12 @@ ros2 run nav2_map_server map_saver_cli -f maps/my_map
 保存地图后，就能进入 Navigation 导航了，步骤如下：
 ```bash
 # 启动 Nav2
-ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo (仿真)
-ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_map.yaml # 终端2 - 启动 Navigation 导航节点 （导航和Rviz可视化）
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo 仿真
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_map.yaml # 终端2 - 启动 Navigation 导航节点
 ```
-> `map:=maps/my_map.yaml` 为通过参数指定已保存的地图文件。这行参数的作用是告诉导航系统加载你之前通过 SLAM 保存的地图文件，从而在已有的环境地图上进行定位与路径规划
+> `map:=maps/my_map.yaml`：这行参数的作用是告诉导航系统加载你之前通过 SLAM 保存的地图文件，从而在已有的环境地图上进行定位与路径规划
 
-此时，你会看到桌面上弹出了 RViz 和 Gazebo 窗口。值得注意的是，本小节的 RViz 界面与前面的小节不同，会多出一个 Nav2 导航相关的面板。同时，在本小节中我们不再启动键盘控制节点。这是因为当前已经进入自主导航模式，Nav2 会根据目标点自动进行路径规划与运动控制，因此无需人工通过键盘干预，小车便可自动完成导航任务
+此时，你会看到桌面上弹出了 RViz 和 Gazebo 窗口
 
 Navigation 导航支持 **单点导航**、**多点导航**、**APIs导航**。这里先对单点导航和多点导航进行讲解，APIs导航将在后续章节中进行补充
 ### 4.1 单点导航
