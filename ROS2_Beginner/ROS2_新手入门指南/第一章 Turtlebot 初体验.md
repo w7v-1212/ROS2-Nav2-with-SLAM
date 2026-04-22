@@ -43,7 +43,7 @@ ros2 run turtlebot3_teleop teleop_keyboard # 终端2 - 启动键盘控制节点 
 
 ```bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo (仿真)
-ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True # 终端2 - 启动建图节点 (建图和 Rviz 可视化)
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True # 终端2 - 启动建图节点 (建图和Rviz可视化)
 ros2 run turtlebot3_teleop teleop_keyboard # 终端3 - 启动键盘控制节点 (利用键盘控制 Turtlebot)
 ```
 
@@ -71,7 +71,7 @@ ros2 run nav2_map_server map_saver_cli -f maps/my_map
 ```bash
 # 启动 Nav2
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py use_time_sim:=True # 终端1 - 启动 Gazebo (仿真)
-ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_map.yaml # 终端2 - 启动 Navigation 导航节点 （导航和 Rviz 可视化）
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/my_map.yaml # 终端2 - 启动 Navigation 导航节点 （导航和Rviz可视化）
 ```
 > `map:=maps/my_map.yaml` 为通过参数指定已保存的地图文件。这行参数的作用是告诉导航系统加载你之前通过 SLAM 保存的地图文件，从而在已有的环境地图上进行定位与路径规划
 
